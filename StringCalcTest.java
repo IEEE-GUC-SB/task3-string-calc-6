@@ -50,6 +50,6 @@ public class StringCalcTest {
 
     @Test
     public void NotCountingNumberGreaterThan1000() {
-        assertEquals(2, instance.Add("2,1000"));
+        assertEquals(2, instance.Add("2,1001"));
     }
 }
