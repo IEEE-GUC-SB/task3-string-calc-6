@@ -47,4 +47,9 @@ public class StringCalcTest {
     public void givenStringContainingDelimeterReturnsTheSum() {
         assertEquals(3, instance.Add("//;\n1;2"));
     }
+
+    @Test
+    public void NotCountingNumberGreaterThan1000() {
+        assertEquals(2, instance.Add("2,1000"));
+    }
 }
