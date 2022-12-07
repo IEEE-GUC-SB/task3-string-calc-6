@@ -1,15 +1,15 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
 
-public class JUnitTest {
-    StringCalc instance;
+public class StringCalcTest {
+    StringCalc instance = new StringCalc();
 
     @BeforeEach
-    void setUp() {
-        instance = new StringCalc();
-    }
+    // public void setUp() {
+    // instance = new StringCalc();
+    // }
 
     @Test
     public void givenAnEmptyStringReturnZero() {
