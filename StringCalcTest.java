@@ -42,4 +42,9 @@ public class StringCalcTest {
     public void givenStringContainingNewLineFollowedByCommaOrViseVersa() {
         assertEquals(-1, instance.Add("1\n,"));
     }
+
+    @Test
+    public void givenStringContainingDelimeterReturnsTheSum() {
+        assertEquals(3, instance.Add("//;\n1;2"));
+    }
 }
