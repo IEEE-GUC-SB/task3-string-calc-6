@@ -32,4 +32,9 @@ public class StringCalcTest {
     public void givenStringWithUnlimitedNumbersReturnsTheirSum() {
         assertEquals(10, instance.Add("2,3,5"));
     }
+
+    @Test
+    public void givenStringContainingNewLinesBetweenNumbersReturnsTheSum() {
+        assertEquals(6, instance.Add("1\n2,3"));
+    }
 }
