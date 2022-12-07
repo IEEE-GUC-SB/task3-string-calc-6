@@ -5,6 +5,8 @@ public class StringCalc {
         else if (numbers.length() > 2) {
             int sum = 0;
             char delimiter = ' ';
+            String value = "";
+            boolean flag = false;
             if (numbers.length() >= 4) {
                 if (numbers.charAt(0) == '/' && numbers.charAt(1) == '/') {
                     delimiter = numbers.charAt(2);
@@ -17,17 +19,34 @@ public class StringCalc {
                     currentChar = ',';
                 }
                 if (currentChar == '\n') {
-                    i++;
-                    if (currentChar == ',') {
+                    currentChar = ',';
+                    if (numbers.charAt(i + 1) == ',') {
                         return -1;
                     }
                 }
                 if (currentChar == ',') {
-                    if (currentChar == '\n') {
+                    if (numbers.charAt(i + 1) == ',') {
                         return -1;
                     }
-                } else
-                    sum += Integer.parseInt(currentChar + "");
+                    if (flag == false) {
+                        flag = true;
+                    } else {
+                        flag = false;
+                    }
+                    // if (i == numbers.length() - 2) {
+                    // flag = false;
+                    // }
+
+                } else {
+                    value += currentChar;
+                    if (flag == false || i == numbers.length() - 1 || numbers.charAt(i + 1) == ',') {
+                        if (Integer.parseInt(value + "") <= 1000) {
+                            sum += Integer.parseInt(value + "");
+                        }
+                        value = "";
+
+                    }
+                }
             }
             return sum;
         } else {
