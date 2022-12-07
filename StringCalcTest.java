@@ -40,6 +40,6 @@ public class StringCalcTest {
 
     @Test
     public void givenStringContainingNewLineFollowedByCommaOrViseVersa() {
-        assertEquals(-1, "1,\n");
+        assertEquals(-1, instance.Add("1\n,"));
     }
 }
