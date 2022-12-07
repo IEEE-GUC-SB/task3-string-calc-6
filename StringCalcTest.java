@@ -37,4 +37,9 @@ public class StringCalcTest {
     public void givenStringContainingNewLinesBetweenNumbersReturnsTheSum() {
         assertEquals(6, instance.Add("1\n2,3"));
     }
+
+    @Test
+    public void givenStringContainingNewLineFollowedByCommaOrViseVersa() {
+        assertEquals(-1, "1,\n");
+    }
 }
