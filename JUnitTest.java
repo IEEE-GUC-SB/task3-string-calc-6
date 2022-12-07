@@ -1,12 +1,19 @@
-import java.beans.Transient;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
-import StringCalc;
+import org.junit.jupiter.api.*;
 
 public class JUnitTest {
+    StringCalc instance;
+
+    @BeforeEach
+    void setUp() {
+        instance = new StringCalc();
+    }
+
     @Test
-    public int givenAnEmptyStringReturnZero() {
-        assertEquals(0, Add(""));
+    public void givenAnEmptyStringReturnZero() {
+        assertEquals(0, instance.Add(""));
 
     }
 }

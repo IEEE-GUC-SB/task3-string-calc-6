@@ -1,0 +1,8 @@
+{
+
+    "java.jdt.ls.java.home" : "E:\\ecliplsejdk",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "E:\\org_junit_platform_junit-platform-console-standalone_1.6.0_junit-platform-console-standalone-1.6.0.jar"
+    ]
+}
