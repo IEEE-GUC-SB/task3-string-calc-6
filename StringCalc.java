@@ -1,6 +1,10 @@
 public class StringCalc {
     public int Add(String numbers) {
-        return 0;
-    }
+        if (numbers.equals(""))
+            return 0;
+        else {
+            return Integer.parseInt(numbers);
+        }
 
+    }
 }
