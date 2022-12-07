@@ -22,4 +22,9 @@ public class StringCalcTest {
         assertEquals(4, instance.Add("4"));
 
     }
+
+    @Test
+    public void givenStringWithTwoNumbersWithCommaInBetweenReturnTheirSum() {
+        assertEquals(3, instance.Add("1,2"));
+    }
 }
