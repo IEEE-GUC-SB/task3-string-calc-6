@@ -1,5 +1,7 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.beans.Transient;
+
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -51,5 +53,10 @@ public class StringCalcTest {
     @Test
     public void NotCountingNumberGreaterThan1000() {
         assertEquals(2, instance.Add("2,1001"));
+    }
+
+    @Test
+    public void AllowingTheSameDelimiterManyTimes() {
+        assertEquals(6, instance.Add("//[***]\n1***2***3"));
     }
 }
